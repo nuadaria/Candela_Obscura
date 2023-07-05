@@ -1,0 +1,1090 @@
+<script type="text/worker">
+
+	//ROLE CHANGE
+	on("change:role", function() {
+		resetValues();
+		getAttrs(["role"], function(values) {
+			let role = values.role;
+			const output = {};
+			switch(role) {
+				case "0": //face
+					output['control_one'] = "on";
+					output['sway_one'] = "on";
+					output['sway_two'] = "on";
+					output['read_one'] = "on";
+					output['hide_one'] = "on";
+					output['hide_two'] = "on";
+					output['focus_one'] = "on";
+					output['sense_one'] = "on";
+					output['sense_two'] = "on";
+					output['move_total'] = 0;
+					output['strike_total'] = 0;
+					output['control_total'] = 1;
+					output['sway_total'] = 2;
+					output['read_total'] = 1;
+					output['hide_total'] = 2;
+					output['survey_total'] = 0;
+					output['focus_total'] = 1;
+					output['sense_total'] = 2;
+					output['sway_gilded'] = 1;
+					output['hide_gilded'] = 1;
+					output['nerve_max_one'] = "on";
+					output['nerve_max_two'] = "on";
+					output['nerve_max_three'] = "on";
+					output['cunning_max_one'] = "on";
+					output['cunning_max_two'] = "on";
+					output['cunning_max_three'] = "on";
+					output['intuition_max_one'] = "on";
+					output['intuition_max_two'] = "on";
+					output['intuition_max_three'] = "on";
+				break;
+				case "1": //muscle
+					output['move_one'] = "on";
+					output['move_two'] = "on";
+					output['strike_one'] = "on";
+					output['strike_two'] = "on";
+					output['read_one'] = "on";
+					output['hide_one'] = "on";
+					output['survey_one'] = "on";
+					output['survey_two'] = "on";
+					output['focus_one'] = "on";
+					output['move_total'] = 2;
+					output['strike_total'] = 2;
+					output['control_total'] = 0;
+					output['sway_total'] = 0;
+					output['read_total'] = 1;
+					output['hide_total'] = 1;
+					output['survey_total'] = 2;
+					output['focus_total'] = 1;
+					output['sense_total'] = 0;
+					output['move_gilded'] = 1;
+					output['strike_gilded'] = 1;
+					output['nerve_max_one'] = "on";
+					output['nerve_max_two'] = "on";
+					output['nerve_max_three'] = "on";
+					output['nerve_max_four'] = "on";
+					output['nerve_max_five'] = "on";
+					output['nerve_max_six'] = "on";
+					output['cunning_max_one'] = "on";
+					output['cunning_max_two'] = "on";
+					output['cunning_max_three'] = "on";
+				break;
+				case "2": //scholar
+					output['control_one'] = "on";
+					output['sway_one'] = "on";
+					output['sway_two'] = "on";
+					output['read_one'] = "on";
+					output['survey_one'] = "on";
+					output['survey_two'] = "on";
+					output['focus_one'] = "on";
+					output['focus_two'] = "on";
+					output['sense_one'] = "on";
+					output['move_total'] = 0;
+					output['strike_total'] = 0;
+					output['control_total'] = 1;
+					output['sway_total'] = 2;
+					output['read_total'] = 1;
+					output['hide_total'] = 0;
+					output['survey_total'] = 2;
+					output['focus_total'] = 2;
+					output['sense_total'] = 1;
+					output['control_gilded'] = 1;
+					output['focus_gilded'] = 1;
+					output['nerve_max_one'] = "on";
+					output['nerve_max_two'] = "on";
+					output['cunning_max_one'] = "on";
+					output['cunning_max_two'] = "on";
+					output['cunning_max_three'] = "on";
+					output['intuition_max_one'] = "on";
+					output['intuition_max_two'] = "on";
+					output['intuition_max_three'] = "on";
+					output['intuition_max_four'] = "on";
+				break;
+				case "3": //slink
+					output['move_one'] = "on";
+					output['strike_one'] = "on";
+					output['control_one'] = "on";
+					output['read_one'] = "on";
+					output['sway_one'] = "on";
+					output['read_one'] = "on";
+					output['hide_one'] = "on";
+					output['hide_two'] = "on";
+					output['survey_one'] = "on";
+					output['focus_one'] = "on";
+					output['move_total'] = 1;
+					output['strike_total'] = 1;
+					output['control_total'] = 1;
+					output['sway_total'] = 1;
+					output['read_total'] = 1;
+					output['hide_total'] = 2;
+					output['survey_total'] = 1;
+					output['focus_total'] = 1;
+					output['sense_total'] = 2;
+					output['hide_gilded'] = 1;
+					output['survey_gilded'] = 1;
+					output['nerve_max_one'] = "on";
+					output['nerve_max_two'] = "on";
+					output['nerve_max_three'] = "on";
+					output['cunning_max_one'] = "on";
+					output['cunning_max_two'] = "on";
+					output['cunning_max_three'] = "on";
+					output['cunning_max_four'] = "on";
+					output['cunning_max_five'] = "on";
+					output['cunning_max_six'] = "on";
+				break;
+				case "4": //weird
+					output['strike_one'] = "on";
+					output['control_one'] = "on";
+					output['read_one'] = "on";
+					output['read_one'] = "on";
+					output['read_two'] = "on";
+					output['hide_one'] = "on";
+					output['focus_one'] = "on";
+					output['focus_two'] = "on";
+					output['sense_one'] = "on";
+					output['sense_two'] = "on";
+					output['move_total'] = 0;
+					output['strike_total'] = 1;
+					output['control_total'] = 1;
+					output['sway_total'] = 0;
+					output['read_total'] = 2;
+					output['hide_total'] = 1;
+					output['survey_total'] = 0;
+					output['focus_total'] = 2;
+					output['sense_total'] = 2;
+					output['focus_gilded'] = 1;
+					output['sense_gilded'] = 1;
+					output['cunning_max_one'] = "on";
+					output['cunning_max_two'] = "on";
+					output['cunning_max_three'] = "on";
+					output['intuition_max_one'] = "on";
+					output['intuition_max_two'] = "on";
+					output['intuition_max_three'] = "on";
+					output['intuition_max_four'] = "on";
+					output['intuition_max_five'] = "on";
+					output['intuition_max_six'] = "on";
+				break;
+			}
+			setAttrs(output); 
+		});
+	});
+	
+	//MOVE CHANGES
+	on("change:move_one change:move_two change:move_three", function() {
+		setTotalMoves('move');
+	});
+	
+	on("change:strike_one change:strike_two change:strike_three", function() {
+		setTotalMoves('strike');
+	});
+	
+	on("change:control_one change:control_two change:control_three", function() {
+		setTotalMoves('control');
+	});
+	
+	on("change:sway_one change:sway_two change:sway_three", function() {
+		setTotalMoves('sway');
+	});
+	
+	on("change:read_one change:read_two change:read_three", function() {
+		setTotalMoves('read');
+	});
+	
+	on("change:hide_one change:hide_two change:hide_three", function() {
+		setTotalMoves('hide');
+	});
+	
+	on("change:survey_one change:survey_two change:survey_three", function() {
+		setTotalMoves('survey');
+	});
+	
+	on("change:focus_one change:focus_two change:focus_three", function() {
+		setTotalMoves('focus');
+	});
+	
+	on("change:sense_one change:sense_two change:sense_three", function() { 
+		setTotalMoves('sense');
+	});
+	
+	// ROLL CHECKS
+	on('clicked:moveCheck', (info) => {
+		rollCheck('move');
+    });
+	
+	on('clicked:strikeCheck', (info) => {
+		rollCheck('strike');
+    });
+	
+	on('clicked:controlCheck', (info) => {
+		rollCheck('control');
+    });
+
+	on('clicked:swayCheck', (info) => {
+		rollCheck('sway');
+    });
+		
+	on('clicked:readCheck', (info) => {
+		rollCheck('read');
+    });
+		
+	on('clicked:hideCheck', (info) => {
+		rollCheck('hide');
+    });
+		
+	on('clicked:surveyCheck', (info) => {
+		rollCheck('survey');
+    });
+		
+	on('clicked:focusCheck', (info) => {
+		rollCheck('focus');
+    });
+		
+	on('clicked:senseCheck', (info) => {
+		rollCheck('sense');
+    });
+
+
+	var setTotalMoves = function(name) {
+		let attrs = [name + '_one', name + '_two', name + '_three'];
+		getAttrs(attrs, function(values) {
+			let total = 0;
+			for(var i in values){
+				if(values[i] == "on") {
+					total += 1;
+				}
+			}
+			const output = {};
+			output[name + '_total'] = total;
+			setAttrs(output);
+		});
+	};
+	
+	var resetValues = function() {
+		const output = {};
+		output['move_one'] = 0;
+		output['move_two'] = 0;
+		output['move_three'] = 0;
+		output['strike_one'] = 0;
+		output['strike_two'] = 0;
+		output['strike_three'] = 0;
+		output['sway_one'] = 0;
+		output['sway_two'] = 0;
+		output['sway_three'] = 0;
+		output['read_one'] = 0;
+		output['read_two'] = 0;
+		output['read_three'] = 0;
+		output['hide_one'] = 0;
+		output['hide_two'] = 0;
+		output['hide_three'] = 0;
+		output['survey_one'] = 0;
+		output['survey_two'] = 0;
+		output['survey_three'] = 0;
+		output['focus_one'] = 0;
+		output['focus_two'] = 0;
+		output['focus_three'] = 0;
+		output['sense_one'] = 0;
+		output['sense_two'] = 0;
+		output['sense_three'] = 0;
+		//GILDED ACTIONS
+		output['move_gilded'] = 0;
+		output['strike_gilded'] = 0;
+		output['control_gilded'] = 0;
+		output['sway_gilded'] = 0;
+		output['read_gilded'] = 0;
+		output['hide_gilded'] = 0;
+		output['survey_gilded'] = 0;
+		output['focus_gilded'] = 0;
+		output['sense_gilded'] = 0;
+		//DRIVE MAXES
+		//NERVE
+		output['nerve_max_one'] = 0;
+		output['nerve_max_two'] = 0;
+		output['nerve_max_three'] = 0;
+		output['nerve_max_four'] = 0;
+		output['nerve_max_five'] = 0;
+		output['nerve_max_six'] = 0;
+		output['nerve_max_seven'] = 0;
+		output['nerve_max_eight'] = 0;
+		output['nerve_max_nine'] = 0;
+		//CUNNING
+		output['cunning_max_one'] = 0;
+		output['cunning_max_two'] = 0;
+		output['cunning_max_three'] = 0;
+		output['cunning_max_four'] = 0;
+		output['cunning_max_five'] = 0;
+		output['cunning_max_six'] = 0;
+		output['cunning_max_seven'] = 0;
+		output['cunning_max_eight'] = 0;
+		output['cunning_max_nine'] = 0;
+		//INTUITION
+		output['intuition_max_one'] = 0;
+		output['intuition_max_two'] = 0;
+		output['intuition_max_three'] = 0;
+		output['intuition_max_four'] = 0;
+		output['intuition_max_five'] = 0;
+		output['intuition_max_six'] = 0;
+		output['intuition_max_seven'] = 0;
+		output['intuition_max_eight'] = 0;
+		output['intuition_max_nine'] = 0;
+		setAttrs(output);
+	};
+	
+	var rollCheck = function(name) {
+		let rollString = '';
+		let attrs = [name + '_total', name + '_gilded'];
+		getAttrs(attrs, function(values) {
+			let total = values[attrs[0]];
+			let gilded = values[attrs[1]];
+			name = name.charAt(0).toUpperCase() + name.slice(1);
+			rollString = '&{template:main} {{name=' + name + ' Check}} {{roll1=[[?{Drive used|0}d6 +';
+			if(total > 0) {
+				if(gilded == 1) {
+					rollString += (total - 1) + 'd6 + 1d6]]}}';
+				} else {
+					rollString += total + 'd6]]}}';
+				}
+			} else {
+				rollString += '2d6kl1]]}}'
+			}
+			startRoll(rollString, (results) => {
+				const rolls = results.results.roll1.dice;
+				let computed = '';
+				if (results.results.roll1.expression.includes('kl') && results.results.roll1.expression.includes('0d6')) {
+					computed = results.results.roll1.result;
+				} else if (results.results.roll1.expression.includes('kl') && !results.results.roll1.expression.includes('0d6')) {
+					results.results.roll1.rolls[0].results.forEach(function (item, index, array) {
+						if (index === array.length - 1){
+							computed += item;
+						} else {
+							computed += item + ', ';
+						}
+					});
+				} else if(total > 0 && gilded == 1) {
+					rolls.forEach(function (item, index, array) {
+						if (index === array.length - 1){
+							computed += item + ' gilded';
+						} else {
+							computed += item + ', ';
+						}
+					});
+				} else if (total > 0) {
+					rolls.forEach(function (item, index, array) {
+						if (index === array.length - 1){
+							computed += item;
+						} else {
+							computed += item + ', ';
+						}
+					});
+				} else {
+					computed = results.results.roll1.result;
+				}
+
+				finishRoll(
+					results.rollId,
+					{
+						roll1: computed
+					}
+				);
+			});
+		});
+	};
+	
+</script>
+
+<div class='sheet-container'>
+	<div class='sheet-inner'>
+		<div class='sheet-header'>
+		  <div class='sheet-4colrow'>
+			<div class='sheet-col'>
+			  <img src="https://db4sgowjqfwig.cloudfront.net/campaigns/245244/assets/1335832/CandellaObscuraLogo.png?1686103277" />
+			</div>
+			<div class='sheet-col'>
+			  <div class='sheet-title'>
+				<h1>Candela</h1>
+				</br>
+				<h1>Obscura</h1>
+			  </div>
+			</div>
+			<div class='sheet-col-right'>
+				<div class="sheet-descblock">
+					<div class="row">
+					  <label class='sheet-label' >Name:</label>
+					  <input type="text" class='sheet-input' name="attr_character_name" placeholder="Jarnathan" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' >Pronouns:</label>
+					  <input type="text" class='sheet-input' name="attr_character_pronouns" placeholder="They/Them" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' >Circle:</label>
+					  <input type="text" class='sheet-input' name="attr_character_circle" placeholder="Esoteric Order of..." />
+					</div>
+					<br />
+				</div>
+			</div>
+			<div class='sheet-col-right'>
+				<div class="sheet-descblock">
+					<div class="row">
+					  <label class='sheet-label' >Style:</label>
+					  <input type="text" class='sheet-input' name="attr_character_style" placeholder="Risky" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' >Catalyst:</label>
+					  <input type="text" class='sheet-input' name="attr_character_catalyst" placeholder="OMG" />
+					</div>
+					<div class="row">
+					  <label class='sheet-label' >Question:</label>
+					  <input type="text" class='sheet-input' name="attr_character_question" placeholder="Who dunnit?" />
+					</div>
+					<br />
+				</div>
+			</div>
+		  </div>
+		</div>
+		<!-- .sheet-statheader-top-right > sheet-4colrow:nth-child(4) > ul:nth-child(2):after -->
+		<div class="sheet-content">
+			<div class='sheet-3colrow'>
+				<div class="sheet-attrblockleft">
+					<input name="attr_move_total" type="hidden" >
+					<input name="attr_strike_total" type="hidden" >
+					<input name="attr_control_total" type="hidden" >
+					<input name="attr_sway_total" type="hidden" >
+					<input name="attr_read_total" type="hidden" >
+					<input name="attr_hide_total" type="hidden" >
+					<input name="attr_survey_total" type="hidden" >
+					<input name="attr_focus_total" type="hidden" >
+					<input name="attr_sense_total" type="hidden" >
+					<div class='sheet-statheader-top'>
+						<div class='sheet-5colrow'>
+							<div class='sheet-col'>
+								<h3 style='color:lightgrey;'>Nerve</h3>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_one" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_two" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_three" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_seven" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_eight" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_nine" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_four" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_five" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_six" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_four" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_five" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_six" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_seven" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_eight" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_nerve_current_nine" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_one" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_two" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_nerve_max_three" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<span>Drives</span>
+								<br>
+								<span>Max</span>
+							</div>
+						</div>
+					</div>
+					<div class='sheet-moves'>
+						<ul class='actions'>
+							<input class="sheet-move-gilded" name="attr_move_gilded" type="hidden" >
+							<input class="sheet-strike-gilded" name="attr_strike_gilded" type="hidden" >
+							<input class="sheet-control-gilded" name="attr_control_gilded" type="hidden" >
+							<li class='hiddenLI'><button type="action" name="act_moveCheck">Move</button>    <span class='actionDesc'>run, dodge, navigate</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_move_one"><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_move_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_move_three" ><span class="dot"></span></label>
+							<li class='hiddenLI'><button type="action" name="act_strikeCheck">Strike</button>    <span class='actionDesc'>punch, break, knock down</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_strike_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_strike_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_strike_three" ><span class="dot"></span></label>
+							<li class='hiddenLI'><button type="action" name="act_controlCheck">Control</button>    <span class='actionDesc'>drive, shoot, finesse</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_control_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_control_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_control_three" ><span class="dot"></span></label>
+						</ul>
+					</div>
+					<div class='sheet-statheader'>
+						<div class='sheet-5colrow'>
+							<div class='sheet-col'>
+								<h3 style='color:lightgrey;'>Cunning</h3>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_one" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_two" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_three" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_seven" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_eight" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_nine" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_four" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_five" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_six" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_four" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_five" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_six" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_seven" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_eight" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_cunning_current_nine" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_one" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_two" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_cunning_max_three" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<span>Drives</span>
+								<br>
+								<span>Max</span>
+							</div>
+						</div>
+					</div>
+					<div class='sheet-moves'>
+						<ul class='actions'>
+							<input class="sheet-sway-gilded" name="attr_sway_gilded" type="hidden" >
+							<input class="sheet-read-gilded" name="attr_read_gilded" type="hidden" >
+							<input class="sheet-hide-gilded" name="attr_hide_gilded" type="hidden" >
+							<li class='hiddenLI'><button type="action" name="act_swayCheck">Sway</button>    <span class='actionDesc'>convince, command, consort</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_sway_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_sway_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_sway_three" ><span class="dot"></span></label>
+							<li class='hiddenLI'><button type="action" name="act_readCheck">Read</button>    <span class='actionDesc'>interpret body language, spot lies, gather motive</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_read_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_read_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_read_three" ><span class="dot"></span></label>
+							<li class='hiddenLI'><button type="action" name="act_hideCheck">Hide</button>    <span class='actionDesc'>sneak, distract, sleight of hand</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_hide_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_hide_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_hide_three" ><span class="dot"></span></label>
+					</div>
+					<div class='sheet-statheader'>
+						<div class='sheet-5colrow'>
+							<div class='sheet-col'>
+								<h3 style='color:lightgrey;'>Intuition</h3>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_one" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_two" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_three" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_seven" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_eight" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_nine" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_four" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_five" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_six" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_four" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_five" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_six" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_seven" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_eight" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_intuition_current_nine" ><span></span></label>
+									</li>
+								</ul>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_one" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_two" ><span></span></label>
+										<label><input class='bottom' type="checkbox" name="attr_intuition_max_three" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<span>Drives</span>
+								<br>
+								<span>Max</span>
+							</div>
+						</div>
+					</div>
+					<div class='sheet-moves'>
+						<ul class='actions'>
+							<input class="sheet-survey-gilded" name="attr_survey_gilded" type="hidden" >
+							<input class="sheet-focus-gilded" name="attr_focus_gilded" type="hidden" >
+							<input class="sheet-sense-gilded" name="attr_sense_gilded" type="hidden" >
+							<li class='hiddenLI'><button type="action" name="act_surveyCheck">Survey</button>    <span class='actionDesc'>search, track, spot</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_survey_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_survey_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_survey_three" ><span class="dot"></span></label>
+							<li class='hiddenLI'><button type="action" name="act_focusCheck">Focus</button>    <span class='actionDesc'>inspect, analyze, remember</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_focus_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_focus_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_focus_three" ><span class="dot"></span></label>
+							<li class='hiddenLI'><button type="action" name="act_senseCheck">Sense</button>    <span class='actionDesc'>attune, channel, reveal</span></li>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_sense_one" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_sense_two" ><span class="dot"></span></label>
+								<label class="dotLabel"><input class="dotCheck" type="checkbox" name="attr_sense_three" ><span class="dot"></span></label>
+						</ul>
+					</div>
+					<br>
+					<span class='resistText'>Spend a resistance to reroll a number of dice equal to your action rating.</span>
+				</div>
+				<div class='sheet-classblock'>
+					<span style='font-weight: bold; font-size: 18px;'>Role:</span>
+					<input name="attr_role" type="hidden" class="sheet-class-switch">
+					<select name="attr_role">
+						<option value="0" selected="selected">Face</option>
+						<option value="1">Muscle</option>
+						<option value="2">Scholar</option>
+						<option value="3">Slink</option>
+						<option value="4">Weird</option>
+					</select>
+					<div class='sheet-face-div'>
+						<div class='sheet-role-div'>
+							<ul class='actions'>
+								<li class='hiddenLI'>
+									<p class='sheet-ability-name'>
+										I know a guy:
+									</p>
+									<p class='sheet-ability-desc'>
+										Once per assignment, ask the GM who you know nearby that could help you. They will give you a temporary 	contact, and explain why they might have insight into the investigation.
+									</p>
+								</li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+							</ul>
+						</div>
+						<div class='sheet-speciality-div'>
+							<span style='font-weight: bold; font-size: 18px;'>Speciality:</span>
+							<input name="attr_speciality" type="hidden" class="sheet-spec-face-switch">
+							<select name="attr_speciality">
+								<option value="0" selected="selected">Journalist</option>
+								<option value="1">Magician</option>
+							</select>
+							<div class='sheet-journalist-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+							<div class='sheet-magician-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'>
+										<p class='sheet-ability-name'>
+											Misdirection:
+										</p>
+										<p class='sheet-ability-desc'>
+											When you use your words or actions to distract a target from what is actually happening, make a Hide roll. The first Cunning you or an ally spends on this roll is worth +2d instead of +1d.
+										</p>
+									</li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>
+										<p class='sheet-ability-name'>
+											The Prestige:
+										</p>
+										<p class='sheet-ability-desc'>
+											Your magic is usually all smoke and mirrors, but you do have one trick you’ve learned that’s real. Roll Sense when you perform it, and on a success, take a Bleed mark. Circle one option when you take this ability: change appearance, levitate, summon mundane object, teleport a short distance, throw your voice.
+										</p></p></span></li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class='sheet-illumination-keys'>
+							<span style="font-weight: bold; font-size: 18px;">Illumination Keys</span>
+							<br>
+							Perform A Trick | Spot A Ruse | Seek Out Real Magick
+						</div>
+					</div>
+					<div class='sheet-muscle-div'>
+						<div class='sheet-role-div'>
+							<ul class='actions'>
+								<li class='hiddenLI'>
+									<p class='sheet-ability-name'>
+										Behind me:
+									</p>
+									<p class='sheet-ability-desc'>
+										Spend 1 Nerve to choose an ally in the same area as you who is about to take a mark from a phenomenon. Describe what you do that allows you to take the mark instead.
+									</p>
+								</li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+							</ul>
+						</div>
+						<div class='sheet-speciality-div'>
+							<span style='font-weight: bold; font-size: 18px;'>Speciality:</span>
+							<input name="attr_speciality" type="hidden" class="sheet-spec-muscle-switch">
+							<select name="attr_speciality">
+								<option value="0" selected="selected">Explorer</option>
+								<option value="1">Solider</option>
+							</select>
+							<div class='sheet-explorer-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'>
+										<p class='sheet-ability-name'>
+											Tenacious:
+										</p>
+										<p class='sheet-ability-desc'>
+											When you have one or more Bleed marks, gild an additional die on Move, Strike, or Control rolls while in danger.
+										</p>
+									</li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>
+										<p class='sheet-ability-name'>
+											Field Experience:
+										</p>
+										<p class='sheet-ability-desc'>
+											You’ve traveled the world and been in many dangerous positions before. Once per assignment, describe to the group how a previous adventure is similar to your current situation and refresh 1 Nerve for everyone in your circle.
+										</p></p></span></li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+							<div class='sheet-solider-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class='sheet-illumination-keys'>
+							<span style="font-weight: bold; font-size: 18px;">Illumination Keys</span>
+							<br>
+							Study An Artifact | Discuss History | Run Into Danger
+						</div>
+					</div>
+					<div class='sheet-scholar-div'>
+						<div class='sheet-role-div'>
+							<ul class='actions'>
+								<li class='hiddenLI'>
+									<p class='sheet-ability-name'>
+										Well-Read:
+									</p>
+									<p class='sheet-ability-desc'>
+										You’re highly educated and retain knowledge better than most. When you use Intuition while making a roll, if you fail the roll, earn back any Intuition you used.
+									</p>
+								</li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+							</ul>
+						</div>
+						<div class='sheet-speciality-div'>
+							<span style='font-weight: bold; font-size: 18px;'>Speciality:</span>
+							<input name="attr_speciality" type="hidden" class="sheet-spec-scholar-switch">
+							<select name="attr_speciality">
+								<option value="0" selected="selected">Doctor</option>
+								<option value="1">Professor</option>
+							</select>
+							<div class='sheet-doctor-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+							<div class='sheet-professor-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'>
+										<p class='sheet-ability-name'>
+											Steel Mind:
+										</p>
+										<p class='sheet-ability-desc'>
+											Once per assignment, when you should take a Brain mark, you may instead spend 2 Intuition to negate it.
+										</p>
+									</li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>
+										<p class='sheet-ability-name'>
+											Chemical Concoction:
+										</p>
+										<p class='sheet-ability-desc'>
+											You know how to mix chemicals together to achieve particular effects. When you take Laboratory Equipment as gear, you may spend a few minutes concocting a mixture that is: acidic, explosive, flammable, loud, sleep-inducing, sticky, or toxic.
+										</p></p></span></li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class='sheet-illumination-keys'>
+							<span style="font-weight: bold; font-size: 18px;">Illumination Keys</span>
+							<br>
+							Mentor An Ally | Reference Research | Make A Plan
+						</div>
+					</div>
+					<div class='sheet-slink-div'>
+						<div class='sheet-role-div'>
+							<ul class='actions'>
+								<li class='hiddenLI'>
+									<p class='sheet-ability-name'>
+										Scout:
+									</p>
+									<p class='sheet-ability-desc'>
+										If you have time to observe a location, you can spend 1 Intuition to ask a question: What do I notice here that others do not see? What in this place might be of use to us? What path should we follow?
+									</p>
+								</li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+							</ul>
+						</div>
+						<div class='sheet-speciality-div'>
+							<span style='font-weight: bold; font-size: 18px;'>Speciality:</span>
+							<input name="attr_speciality" type="hidden" class="sheet-spec-slink-switch">
+							<select name="attr_speciality">
+								<option value="0" selected="selected">Criminal</option>
+								<option value="1">Detective</option>
+							</select>
+							<div class='sheet-criminal-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'>
+										<p class='sheet-ability-name'>
+											Street Smarts:
+										</p>
+										<p class='sheet-ability-desc'>
+											You know how to keep an eye on your surroundings. Whenever you make a Survey roll, you may spend any drive instead of only using Intuition.
+										</p>
+									</li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>
+										<p class='sheet-ability-name'>
+											Leverage:
+										</p>
+										<p class='sheet-ability-desc'>
+											On a successful Read roll, you may ask the GM what your target truly wants. On any Sway rolls you make using this information, also add your current Cunning resistance.
+										</p></p></span></li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+							<div class='sheet-detective-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class='sheet-illumination-keys'>
+							<span style="font-weight: bold; font-size: 18px;">Illumination Keys</span>
+							<br>
+							Do Something Illegal | Make A Deal | Stand Up To Authority
+						</div>
+					</div>
+					<div class='sheet-weird-div'>
+						<div class='sheet-role-div'>
+							<ul class='actions'>
+								<li class='hiddenLI'>
+									<p class='sheet-ability-name'>
+										Let them in:
+									</p>
+									<p class='sheet-ability-desc'>
+										Whenever you take one or more Bleed marks, you also gain additional information about the phenomenon that harmed you. Ask the GM a question about the source of the bleed.
+									</p>
+								</li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+							</ul>
+						</div>
+						<div class='sheet-speciality-div'>
+							<span style='font-weight: bold; font-size: 18px;'>Speciality:</span>
+							<input name="attr_speciality" type="hidden" class="sheet-spec-weird-switch">
+							<select name="attr_speciality">
+								<option value="0" selected="selected">Medium</option>
+								<option value="1">Occultist</option>
+							</select>
+							<div class='sheet-medium-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+							<div class='sheet-occultist-div'>
+								<ul class='actions'>
+									<li class='hiddenLI'>
+										<p class='sheet-ability-name'>
+											Ghostblade:
+										</p>
+										<p class='sheet-ability-desc'>
+											You can attune a ritual knife to yourself. If you coat it in your blood (take a Body mark), it can wound magickal beings and strike invisible or ethereal enemies.
+										</p>
+									</li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>
+										<p class='sheet-ability-name'>
+											Extend Your Senses:
+										</p>
+										<p class='sheet-ability-desc'>
+											When you roll with Sense to understand more about a phenomenon you’ve encountered, also add a number of dice equal to your current Intuition resistance to the roll.
+										</p></p></span></li>
+									<li class='hiddenLI'><p class='sheet-ability-name'>Availabile in the full game</p></span></li>
+								</ul>
+							</div>
+						</div>
+						<div class='sheet-illumination-keys'>
+							<span style="font-weight: bold; font-size: 18px;">Illumination Keys</span>
+							<br>
+							Consult Arcane Texts | Collect Oddities | Act Bizarre
+						</div>
+					</div>
+				</div>
+				<div class="sheet-attrblockright">
+					<div class='sheet-statheader-top-right'>
+						<div class='sheet-4colrow'>
+							<div class='sheet-col'>
+								<h3 style='color:lightgrey;'>Marks</h3>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_character_mark_body_one" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_character_mark_body_two" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_character_mark_body_three" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_character_mark_brain_one" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_character_mark_brain_two" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_character_mark_brain_three" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+							<div class='sheet-col-right'>
+								<ul>
+									<li class='hiddenLI'>
+										<label><input class='top' type="checkbox" name="attr_character_mark_bleed_one" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_character_mark_bleed_two" ><span></span></label>
+										<label><input class='top' type="checkbox" name="attr_character_mark_bleed_three" ><span></span></label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class='scars'>
+						<h3 style='padding-top: 10px'>Scars</h3>
+						<ol class='ulCircle'>
+							<li><input type="text" name="attr_character_scar_one" /></li>
+							<li><input type="text" name="attr_character_scar_two" /></li>
+							<li><input type="text" name="attr_character_scar_three" /></li>
+						</ol>
+					</div>
+					<div class='relationships'>
+						<h3 style='padding-top: 10px'>Relationships</h3>
+						<textarea class='sheet-textarea' name="attr_character_relationships">
+						
+						</textarea>
+					</div>
+					<div class='gear'>
+						<h3 style='padding-top: 10px'>Gear</h3>
+						<span class='resistText'>During each assignment, choose up to three</span>
+						<input name="attr_role" type="hidden" class="sheet-class-switch">
+						<ol class="faceGear">
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_one" >  Bleed Detector</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_two" >  Hand Weapon</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_three" >  Bleed Containment Vial</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_four" >  Magic Show Gimmick</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_five" >  Flash Powder & Smoke Bomb</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_six" >  Hidden Weapon</label></li>
+						</ol>
+						<ol class="muscleGear">
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_one" >  Bleed Detector</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_two" >  Hand Weapon</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_three" >  Bleed Containment Vial</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_four" >  Excavation Tools</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_five" >  Survival Gear</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_six" >  Research Materials</label></li>
+						</ol>
+						<ol class="scholarGear">
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_one" >  Bleed Detector</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_two" >  Hand Weapon</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_three" >  Bleed Containment Vial</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_four" >  Research Materials</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_five" >  Laboratory Equipment</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_six" >  Small Mundane Invention</label></li>
+						</ol>
+						<ol class="slinkGear">
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_one" >  Bleed Detector</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_two" >  Hand Weapon</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_three" >  Bleed Containment Vial</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_four" >  Forged Documents</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_five" >  Burglary Eqipment</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_six" >  Body Armor (Soak 1 Body)</label></li>
+						</ol>
+						<ol class="weirdGear">
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_one" >  Bleed Detector</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_two" >  Hand Weapon</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_three" >  Bleed Containment Vial</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_four" >  Arcane Text</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_five" >  Ward (Soak 1 Bleed)</label></li>
+							<li><label style='color: black;'><input type="checkbox" name="attr_character_gear_six" >  Occult Supplies</label></li>
+						</ol>
+					</div>
+					<div class='notes'>
+						<h3 style='padding-top: 10px'>Notes</h3>
+						<textarea class='sheet-textarea' name="attr_character_notes">
+						
+						</textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-main">
+    <div class="sheet-template-container">
+        <h1>{{name}}</h1>
+        <div class="sheet-results">
+            <h4>Result = {{computed::roll1}}</h4>
+        </div>
+    </div>
+</rolltemplate>
