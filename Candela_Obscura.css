@@ -1,0 +1,651 @@
+.sheet-title {
+	padding-top: 15px;
+	padding-right: 10px;
+}
+
+.sheet-col-right {
+	float: right;
+	padding-right: 10px;
+}
+
+.sheet-inner {
+    background-color: transparent;
+    background-image: url(https://db4sgowjqfwig.cloudfront.net/campaigns/245244/assets/1126714/parch_3_light.png?1604773798);
+    background-position: center;
+    background-size: 100%;
+	height: 1000px;
+    position: relative;
+}
+
+.sheet-header {
+    padding-bottom: 10px;
+}
+
+.sheet-label {
+    float: left;
+    width: 50px;
+    color: black;
+    font-weight:bold;
+    font-size: 12px;
+    height: 12px;
+}
+
+.sheet-input {
+    float: left;
+    width: calc(100% - 75px);
+}
+
+.sheet-heading {
+    font-size: 1.5em;
+    font-weight:bold;
+    border:0px;
+    border-radius:0px;
+    font-variant: small-caps;
+}
+
+button .sheet-rollatrrib, button .sheet-rollskill{
+    background: seashell;
+    color: black;
+}
+
+.sheet-descblock {
+    background-color: transparent;
+    padding: 10px;
+    color: lightgrey;
+    text-align:center;
+    min-height: 50px;
+}
+
+.sheet-descblock input {
+    font-size: 12px;
+    line-height:15px;
+    height: 15px;
+    margin-bottom:5px;
+}
+
+.sheet-statheader {
+	background: black;
+    color: lightgrey;
+	height: 40px;
+	padding: 5px 0px 5px 15px;
+}
+
+.sheet-statheader-top {
+	background: black;
+	border-radius: 20px 0px 0px 0px;
+    color: lightgrey;
+	height: 40px;
+	padding: 5px 0px 5px 15px;
+}
+
+.sheet-statheader-top-right {
+	background: black;
+	border-radius: 0px 20px 0px 0px;
+    color: lightgrey;
+	height: 40px;
+	padding: 5px 0px 5px 15px;
+}
+
+.sheet-attrblockleft {
+    background-color: transparent;
+	border: 1px solid black;
+	border-radius: 25px 0px 0px 0px;
+	float: left;
+    margin: 10px;
+    min-height: 50px;
+	width: 33%;
+}
+
+.sheet-classblock {
+	float: left;
+	margin-top: 10px;
+	width: 30%;
+}
+
+.sheet-attrblockright {
+    background-color: transparent;
+	border: 1px solid black;
+	border-radius: 0px 25px 0px 0px;
+	float: right;
+    margin: 15px;
+    min-height: 50px;
+	width: 30%;
+}
+
+.sheet-attrblockright:not(:first-child) {
+	margin-left: 10px;
+}
+
+.sheet-attrblockleft input {
+    font-size: 12px;
+    line-height:15px;
+    height: 15px;
+    margin-bottom:5px;
+}
+
+.sheet-attrname {
+    font-weight:bold;
+    font-size: 16px;
+    width:145px;
+    background:transparent;
+    border:0px;
+    color:White;
+}
+
+.sheet-skillblock {
+    margin-left:20px;
+}
+
+.sheet-top {
+    display: inline-block;
+    width:100%;
+}
+
+.sheet-blocklabel {
+    float: left;
+    font-weight:bold;
+    background:transparent;
+    border:0px;
+    color:White;
+}
+
+.sheet-weaponblock {
+    background-color: transparent;
+    padding: 5px;
+    color: lightgrey;
+    min-height:50px;
+}
+
+.sheet-weaponblock input {
+    font-size: 12px;
+    line-height:15px;
+    height: 15px;
+}
+
+.sheet-armorblock {
+    background: #333333;
+    border-radius:15px;
+    border: 1px solid gold;
+    padding: 5px;
+    color: lightgrey;
+    min-height:50px;
+}
+
+.sheet-armorblock input {
+    font-size: 12px;
+    line-height:15px;
+    height: 15px;
+}
+
+.sheet-equipblock {
+    background: #333333;
+    border-radius:15px;
+    border: 1px solid gold;
+    padding: 5px;
+    color: lightgrey;
+    min-height:50px;
+}
+
+.sheet-equipblock input {
+    font-size: 12px;
+    line-height:15px;
+    height: 15px;
+}
+
+.sheet-dirstats {
+    width:50px;
+    text-align:center;
+    background:transparent;
+    border:0px;
+    color: white;
+}
+
+table.sheet-xp {
+    width: 250px;
+}
+table.sheet-xp th{
+    text-align: center;
+    font-weight:bold;
+    border:1px solid gold;
+    border-radius:15px;
+}
+table.sheet-xp td{
+    text-align: center;
+    border:1px solid gold;
+    border-radius:15px;
+    padding:5px;
+    color: white;
+}
+
+.sheet-rolltemplate-basic div.sheet-template-container {
+    background: black;
+    color: white;
+	border: 2px solid gold !important;
+	border-radius: 10px;
+}
+
+.sheet-rolltemplate-basic .sheet-template-header {
+	color: green;
+	padding: 2px;
+	border-bottom: 1px solid gold;
+	line-height: 1.6em;
+	font-size: 1.2em;
+	font-weight: bold;
+    font-variant: small-caps;
+	text-align: center;
+}
+
+.sheet-rolltemplate-basic div {
+	padding: 5px;
+	border-bottom: 1px solid gold;
+}
+
+.sheet-rolltemplate-basic .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 1px solid gold;
+	border-radius: 5px;
+	background: #333333;
+}
+
+.sheet-rolltemplate-basic .inlinerollresult.fullcrit {
+	border: 1px solid gold;
+	background: green;
+}
+
+.sheet-rolltemplate-basic .inlinerollresult.fullfail {
+	border: 1px solid gold;
+	background: red;
+}
+
+.sheet-rolltemplate-basic .inlinerollresult.importantroll {
+	border: 1px solid gold;
+	background: blue;
+}
+
+.sheet-rolltemplate-stat div.sheet-template-container {
+    background: black;
+    color: white;
+	border: 2px solid gold !important;
+	border-radius: 10px;
+}
+
+.sheet-rolltemplate-stat .sheet-template-header {
+	color: green;
+	padding: 2px;
+	border-bottom: 1px solid gold;
+	line-height: 1.6em;
+	font-size: 1.2em;
+	font-weight: bold;
+    font-variant: small-caps;
+	text-align: center;
+}
+
+.sheet-rolltemplate-stat div {
+	padding: 5px;
+	border-bottom: 1px solid gold;
+}
+
+.sheet-rolltemplate-stat .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 1px solid gold;
+	border-radius: 5px;
+	background: #333333;
+}
+
+.sheet-rolltemplate-stat .inlinerollresult.fullfail {
+	border: 1px solid gold;
+	background: green;
+}
+
+.sheet-rolltemplate-stat .inlinerollresult.fullcrit {
+	border: 1px solid gold;
+	background: red;
+}
+
+.sheet-rolltemplate-stat .inlinerollresult.importantroll {
+	border: 1px solid gold;
+	background: blue;
+}
+
+.hiddenLI, .hiddenResistLI {
+  list-style: none;
+}
+
+.hiddenLI > label, .hiddenResistLI > label {
+	display: inline-block !important;
+	padding: 0px 0px 0px 0px !important;
+	width: 25% !important;
+}
+
+ul {
+	height: 27px;
+	margin: 0px 0px 0px 0px;
+}
+
+input[type=checkbox].top, input[type=checkbox].bottom, input[type=checkbox].dotCheck {
+  opacity: none;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+}
+
+input[type=checkbox].top + span {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 25px;
+  background: white;
+  border: 1px black solid;
+}
+
+input[type=checkbox] + span {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 1px black solid;
+}
+
+input[type=checkbox]:checked + span {
+  background: grey;
+}
+
+input[type=checkbox] + span.dot {
+	height: 25px;
+    width: 25px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: thin;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.dotLabel {
+	display: inline !important;
+}
+
+input[type=checkbox] + span.dotResist {
+	height: 15px;
+    width: 15px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: thin;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+ul.actions {
+  font-size: 18px;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+}
+
+ul.actions > li {
+    margin: 0;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+ul.actions > li.hiddenLI:after {
+	background: transparent;
+    border-style: solid;
+    border-width: thin;
+	content: '';
+	height: .4em;
+	width: .4em;
+	display: block;
+	position: absolute;
+	transform: rotate(45deg);
+	top: .25em;
+	left: 0;
+}
+
+/* NERVE ACTIONS */
+.sheet-move-gilded[value="1"] ~ li:first-of-type:after {
+	background: black !important;
+}
+
+.sheet-strike-gilded[value="1"] ~ li:nth-of-type(2):after {
+	background: black !important;
+}
+
+.sheet-control-gilded[value="1"] ~ li:last-of-type:after {
+	background: black !important;
+}
+
+/* CUNNING ACTIONS */
+.sheet-sway-gilded[value="1"] ~ li:first-of-type:after {
+	background: black !important;
+}
+
+.sheet-read-gilded[value="1"] ~ li:nth-of-type(2):after {
+	background: black !important;
+}
+
+.sheet-hide-gilded[value="1"] ~ li:last-of-type:after {
+	background: black !important;
+}
+
+/* INTUITION ACTIONS */
+.sheet-survey-gilded[value="1"] ~ li:first-of-type:after {
+	background: black !important;
+}
+
+.sheet-focus-gilded[value="1"] ~ li:nth-of-type(2):after {
+	background: black !important;
+}
+
+.sheet-sense-gilded[value="1"] ~ li:last-of-type:after {
+	background: black !important;
+}
+
+.ulCircle {
+  list-style-type:circle;
+  padding-left: 20px;
+}
+
+
+.sheet-moves {
+	display: inline-block;
+}
+
+button > .actionDesc {
+	font-size: 12px;
+    font-style: italic;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: thin;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.resistText {
+	font-size: 12px;
+	font-style: italic;
+}
+
+div.sheet-attrblockright > div > div > div:nth-child(4) > ul:first-child:after {
+	color: black;
+	content: 'BODY';
+}
+
+div.sheet-attrblockright > div > div > div:nth-child(3) > ul:first-child:after {
+	color: black;
+	content: 'BRAIN';
+}
+
+div.sheet-attrblockright > div > div > div:nth-child(2) > ul:first-child:after {
+	color: black;
+	content: 'BLEED';
+}
+
+.sheet-col-right > ul > li {
+	padding-bottom: 5px;
+}
+
+.scars {
+	display: inline-block;
+	padding-left: 15px;
+}
+
+.relationships {
+	padding-left: 15px;
+}
+
+.gear {
+	padding-left: 15px;
+}
+
+.notes {
+	padding-left: 15px;
+}
+
+.sheet-textarea {
+	width: 90% !important;
+}
+
+ .sheet-label {
+	color: black;
+}
+ 
+.sheet-face-div, .sheet-muscle-div, .sheet-scholar-div, .sheet-slink-div, .sheet-weird-div,
+.sheet-journalist-div, .sheet-magician-div, .sheet-explorer-div, .sheet-solider-div,
+.sheet-doctor-div, .sheet-professor-div, .sheet-criminal-div, .sheet-detective-div,
+.sheet-medium-div, .sheet-occultist-div {
+	display: none;
+}
+
+/* ROLE DISPLAY BITS */
+.sheet-class-switch[value="0"] ~ .sheet-face-div {
+	display: block;
+}
+
+.sheet-class-switch[value="1"] ~ .sheet-muscle-div {
+	display: block;
+}
+
+.sheet-class-switch[value="2"] ~ .sheet-scholar-div {
+	display: block;
+}
+
+.sheet-class-switch[value="3"] ~ .sheet-slink-div {
+	display: block;
+}
+
+.sheet-class-switch[value="4"] ~ .sheet-weird-div {
+	display: block;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* SPECIALITY DISPLAY BITS */
+/* FACE */
+.sheet-spec-face-switch[value="0"] ~ .sheet-journalist-div {
+	display: block;
+}
+
+.sheet-spec-face-switch[value="1"] ~ .sheet-magician-div {
+	display: block;
+}
+
+/* MUSCLE */
+.sheet-spec-muscle-switch[value="0"] ~ .sheet-explorer-div {
+	display: block;
+}
+
+.sheet-spec-muscle-switch[value="1"] ~ .sheet-solider-div {
+	display: block;
+}
+
+/* SCHOLAR */
+.sheet-spec-scholar-switch[value="0"] ~ .sheet-doctor-div {
+	display: block;
+}
+
+.sheet-spec-scholar-switch[value="1"] ~ .sheet-professor-div {
+	display: block;
+}
+
+/* SLINK */
+.sheet-spec-slink-switch[value="0"] ~ .sheet-criminal-div {
+	display: block;
+}
+
+.sheet-spec-slink-switch[value="1"] ~ .sheet-detective-div {
+	display: block;
+}
+
+/* WEIRD */
+.sheet-spec-weird-switch[value="0"] ~ .sheet-medium-div {
+	display: block;
+}
+
+.sheet-spec-weird-switch[value="1"] ~ .sheet-occultist-div {
+	display: block;
+}
+
+.sheet-speciality-div, .sheet-role-div, .sheet-illumination-keys {
+	display: inline-block;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.faceGear, .muscleGear, .scholarGear, .slinkGear, .weirdGear {
+	display: none;
+}
+
+.sheet-class-switch[value="0"] ~ .faceGear {
+	display: block;
+}
+
+.sheet-class-switch[value="1"] ~ .muscleGear {
+	display: block;
+}
+
+.sheet-class-switch[value="2"] ~ .scholarGear {
+	display: block;
+}
+
+.sheet-class-switch[value="3"] ~ .slinkGear {
+	display: block;
+}
+
+.sheet-class-switch[value="4"] ~ .weirdGear {
+	display: block;
+}
+
+.sheet-illumination-keys {
+	font-weight: bold;
+}
+
+.sheet-ability-name {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+body.sheet-darkmode .sheet-label {
+    float: left;
+    width: 50px;
+    color: black;
+    font-weight:bold;
+    font-size: 12px;
+    height: 12px;
+}
+
+.nerveResist {
+	float: right;
+}
+
+.moves {
+	float: left;
+}
